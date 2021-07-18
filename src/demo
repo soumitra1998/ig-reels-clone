@@ -1,0 +1,176 @@
+{
+          reels.map(({channel,avatarSrc,song,url,likes,shares})=>(
+            <VideoCard
+              channel={channel}
+              avatarSrc={process.env.PUBLIC_URL+'/channel.jpg'}
+              song={song}
+              url={process.env.PUBLIC_URL+'/video1.mp4'}
+              likes={likes}
+              shares={shares}
+        />
+          ))
+        }
+
+
+
+{/* <div className="videoFooter__text">
+                <Avatar alt="Remy Sharp" src={avatarSrc} />
+                <h3>
+                    {channel} . <button>Follow</button>
+                </h3>
+            </div>
+           <div className="videoFooter__ticker">
+               <MusicNoteIcon
+                className="videoFooter__icon"/>
+                <Ticker mode="smooth">
+                    {({index})=>(
+                        <>
+                           
+                            <h1> {song}</h1>
+                        </>
+                    )}
+
+                </Ticker>
+                <div className="videoFooter__actions">
+                    <div className="videoFooter__actionLeft">
+                        <FavoriteIcon fontSize="large"/>
+                        <ModeCommentIcon fontSize="large"/>
+                        <SendIcon fontSize="large"/>
+                        <MoreHorizIcon fontSize="large"/>
+
+                    </div>
+                    <div className="videoFooter__actionRight">
+                        <div className="videoFooter__stat">
+                            <FavoriteIcon fontSize="large"/>
+                            <p>{likes}</p>
+                        </div>
+                        <div className="videoFooter__stat">
+                            <ModeCommentIcon />
+                            <p>{shares}</p>
+                        </div>
+
+
+                    </div>
+                </div>
+
+           </div> */}
+
+
+
+ <div className="videoFooter__left">
+                <div className="videoFooter__text">
+                    <Avatar alt="Remy Sharp" src={avatarSrc} />
+                    <h3>
+                        {channel} . <button>Follow</button>
+                    </h3>
+                </div>
+
+
+
+<div className="videoFooter__ticker">
+                    <MusicNoteIcon className="videoFooter__icon"/>
+                        <Ticker mode="smooth">
+                            {({index})=>(
+                                <>
+                                    <h1> {song}</h1>
+                                </>
+                            )}
+                        </Ticker>
+                    </div>
+
+
+
+
+
+.videoFooter{
+    position: relative;
+    margin-left: 20px;
+    bottom: 200px;
+   
+}
+
+.videoFooter__sides{
+    display: flex;
+    background-color: green;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+}
+.videoFooter__left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.videoFooter__text{
+  
+    position:absolute;
+    bottom: 0;
+    color:white;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.videoFooter__text>h3{
+    margin-left: 10px;
+    padding-bottom: 20px;
+}
+.videoFooter__text>h3>button{
+    border:none;
+    background: none;
+    color:white;
+    font-weight: 900;
+    text-transform: inherit;
+}
+.videoFooter__icon{
+    position:absolute;
+    left: 5px;
+    color:white;
+}
+.videoFooter__ticker{
+    position:absolute;
+    bottom: 0;
+    color:red;
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    
+}
+.videoFooter__ticker>.ticker{
+    height: fit-content;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    width: 60%;
+}
+.videoFooter__ticker h1{
+    padding-top: 7px;
+    font-size: 12px;
+    color: white;
+}
+
+.videoFooter__actions{
+    display: flex;
+    position: absolute;
+    width: 95%;
+    color: white;
+    justify-content: space-between;
+}
+.videoFooter__actionLeft >.MuiSvgIcon-root{
+    padding: 0 10px;
+}
+.videoFooter__actionRight{
+    display: flex;
+}
+
+.videoFooter__stat{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.videoFooter__stat>p{
+    margin-left: 5px;
+}
+.videoFooter__right{
+   
+    margin-right: 20px;
+}
+           
